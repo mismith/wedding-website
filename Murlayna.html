@@ -3,11 +3,24 @@
 
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <script src="./_files/nr-1209.min.js"></script>
+  <link href="https://static.xoedge.com/patterns/images/favicon.ico" rel="shortcut icon">
+  <script src="./_files/nr-1210.min.js"></script>
+  <script type="text/javascript" async="" src="./_files/analytics.min.js"></script>
   <script
-    type="text/javascript">window.NREUM || (NREUM = {}); NREUM.info = { "beacon": "bam-cell.nr-data.net", "errorBeacon": "bam-cell.nr-data.net", "licenseKey": "da771d87c0", "applicationID": "13301311", "transactionName": "JQ1aTUBcWA9dFhlMQUkFQVxBRxsTUAtCVkFJEVxWRQ==", "queueTime": 0, "applicationTime": 60, "agent": "" }</script>
+    type="text/javascript">window.NREUM || (NREUM = {}); NREUM.info = { "beacon": "bam-cell.nr-data.net", "errorBeacon": "bam-cell.nr-data.net", "licenseKey": "da771d87c0", "applicationID": "13301311", "transactionName": "JQ1aTUBcWA9dFhlMQUkFQVxBRxsTUAtCVkFJEVxWRQ==", "queueTime": 0, "applicationTime": 59, "agent": "" }</script>
   <script
-    type="text/javascript">(window.NREUM || (NREUM = {})).loader_config = { licenseKey: "da771d87c0", applicationID: "13301311" }; window.NREUM || (NREUM = {}), __nr_require = function (t, e, n) { function r(n) { if (!e[n]) { var i = e[n] = { exports: {} }; t[n][0].call(i.exports, function (e) { var i = t[n][1][e]; return r(i || e) }, i, i.exports) } return e[n].exports } if ("function" == typeof __nr_require) return __nr_require; for (var i = 0; i < n.length; i++)r(n[i]); return r }({ 1: [function (t, e, n) { function r() { } function i(t, e, n) { return function () { return o(t, [u.now()].concat(f(arguments)), e ? null : this, n), e ? void 0 : this } } var o = t("handle"), a = t(8), f = t(9), c = t("ee").get("tracer"), u = t("loader"), s = NREUM; "undefined" == typeof window.newrelic && (newrelic = s); var d = ["setPageViewName", "setCustomAttribute", "setErrorHandler", "finished", "addToTrace", "inlineHit", "addRelease"], p = "api-", l = p + "ixn-"; a(d, function (t, e) { s[e] = i(p + e, !0, "api") }), s.addPageAction = i(p + "addPageAction", !0), s.setCurrentRouteName = i(p + "routeName", !0), e.exports = newrelic, s.interaction = function () { return (new r).get() }; var m = r.prototype = { createTracer: function (t, e) { var n = {}, r = this, i = "function" == typeof e; return o(l + "tracer", [u.now(), t, n], r), function () { if (c.emit((i ? "" : "no-") + "fn-start", [u.now(), r, i], n), i) try { return e.apply(this, arguments) } catch (t) { throw c.emit("fn-err", [arguments, this, t], n), t } finally { c.emit("fn-end", [u.now()], n) } } } }; a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","), function (t, e) { m[e] = i(l + e) }), newrelic.noticeError = function (t, e) { "string" == typeof t && (t = new Error(t)), o("err", [t, u.now(), !1, e]) } }, {}], 2: [function (t, e, n) { function r(t) { if (NREUM.init) { for (var e = NREUM.init, n = t.split("."), r = 0; r < n.length - 1; r++)if (e = e[n[r]], "object" != typeof e) return; return e = e[n[n.length - 1]] } } e.exports = { getConfiguration: r } }, {}], 3: [function (t, e, n) { function r() { return f.exists && performance.now ? Math.round(performance.now()) : (o = Math.max((new Date).getTime(), o)) - a } function i() { return o } var o = (new Date).getTime(), a = o, f = t(10); e.exports = r, e.exports.offset = a, e.exports.getLastTimestamp = i }, {}], 4: [function (t, e, n) { function r(t) { return !(!t || !t.protocol || "file:" === t.protocol) } e.exports = r }, {}], 5: [function (t, e, n) { function r(t, e) { var n = t.getEntries(); n.forEach(function (t) { "first-paint" === t.name ? d("timing", ["fp", Math.floor(t.startTime)]) : "first-contentful-paint" === t.name && d("timing", ["fcp", Math.floor(t.startTime)]) }) } function i(t, e) { var n = t.getEntries(); n.length > 0 && d("lcp", [n[n.length - 1]]) } function o(t) { t.getEntries().forEach(function (t) { t.hadRecentInput || d("cls", [t]) }) } function a(t) { if (t instanceof m && !g) { var e = Math.round(t.timeStamp), n = { type: t.type }; e <= p.now() ? n.fid = p.now() - e : e > p.offset && e <= Date.now() ? (e -= p.offset, n.fid = p.now() - e) : e = p.now(), g = !0, d("timing", ["fi", e, n]) } } function f(t) { d("pageHide", [p.now(), t]) } if (!("init" in NREUM && "page_view_timing" in NREUM.init && "enabled" in NREUM.init.page_view_timing && NREUM.init.page_view_timing.enabled === !1)) { var c, u, s, d = t("handle"), p = t("loader"), l = t(7), m = NREUM.o.EV; if ("PerformanceObserver" in window && "function" == typeof window.PerformanceObserver) { c = new PerformanceObserver(r); try { c.observe({ entryTypes: ["paint"] }) } catch (v) { } u = new PerformanceObserver(i); try { u.observe({ entryTypes: ["largest-contentful-paint"] }) } catch (v) { } s = new PerformanceObserver(o); try { s.observe({ type: "layout-shift", buffered: !0 }) } catch (v) { } } if ("addEventListener" in document) { var g = !1, h = ["click", "keydown", "mousedown", "pointerdown", "touchstart"]; h.forEach(function (t) { document.addEventListener(t, a, !1) }) } l(f) } }, {}], 6: [function (t, e, n) { function r(t, e) { if (!i) return !1; if (t !== i) return !1; if (!e) return !0; if (!o) return !1; for (var n = o.split("."), r = e.split("."), a = 0; a < r.length; a++)if (r[a] !== n[a]) return !1; return !0 } var i = null, o = null, a = /Version\/(\S+)\s+Safari/; if (navigator.userAgent) { var f = navigator.userAgent, c = f.match(a); c && f.indexOf("Chrome") === -1 && f.indexOf("Chromium") === -1 && (i = "Safari", o = c[1]) } e.exports = { agent: i, version: o, match: r } }, {}], 7: [function (t, e, n) { function r(t) { function e() { t(a && document[a] ? document[a] : document[i] ? "hidden" : "visible") } "addEventListener" in document && o && document.addEventListener(o, e, !1) } e.exports = r; var i, o, a; "undefined" != typeof document.hidden ? (i = "hidden", o = "visibilitychange", a = "visibilityState") : "undefined" != typeof document.msHidden ? (i = "msHidden", o = "msvisibilitychange") : "undefined" != typeof document.webkitHidden && (i = "webkitHidden", o = "webkitvisibilitychange", a = "webkitVisibilityState") }, {}], 8: [function (t, e, n) { function r(t, e) { var n = [], r = "", o = 0; for (r in t) i.call(t, r) && (n[o] = e(r, t[r]), o += 1); return n } var i = Object.prototype.hasOwnProperty; e.exports = r }, {}], 9: [function (t, e, n) { function r(t, e, n) { e || (e = 0), "undefined" == typeof n && (n = t ? t.length : 0); for (var r = -1, i = n - e || 0, o = Array(i < 0 ? 0 : i); ++r < i;)o[r] = t[e + r]; return o } e.exports = r }, {}], 10: [function (t, e, n) { e.exports = { exists: "undefined" != typeof window.performance && window.performance.timing && "undefined" != typeof window.performance.timing.navigationStart } }, {}], ee: [function (t, e, n) { function r() { } function i(t) { function e(t) { return t && t instanceof r ? t : t ? u(t, c, a) : a() } function n(n, r, i, o, a) { if (a !== !1 && (a = !0), !l.aborted || o) { t && a && t(n, r, i); for (var f = e(i), c = v(n), u = c.length, s = 0; s < u; s++)c[s].apply(f, r); var p = d[w[n]]; return p && p.push([b, n, r, f]), f } } function o(t, e) { y[t] = v(t).concat(e) } function m(t, e) { var n = y[t]; if (n) for (var r = 0; r < n.length; r++)n[r] === e && n.splice(r, 1) } function v(t) { return y[t] || [] } function g(t) { return p[t] = p[t] || i(n) } function h(t, e) { l.aborted || s(t, function (t, n) { e = e || "feature", w[n] = e, e in d || (d[e] = []) }) } var y = {}, w = {}, b = { on: o, addEventListener: o, removeEventListener: m, emit: n, get: g, listeners: v, context: e, buffer: h, abort: f, aborted: !1 }; return b } function o(t) { return u(t, c, a) } function a() { return new r } function f() { (d.api || d.feature) && (l.aborted = !0, d = l.backlog = {}) } var c = "nr@context", u = t("gos"), s = t(8), d = {}, p = {}, l = e.exports = i(); e.exports.getOrSetContext = o, l.backlog = d }, {}], gos: [function (t, e, n) { function r(t, e, n) { if (i.call(t, e)) return t[e]; var r = n(); if (Object.defineProperty && Object.keys) try { return Object.defineProperty(t, e, { value: r, writable: !0, enumerable: !1 }), r } catch (o) { } return t[e] = r, r } var i = Object.prototype.hasOwnProperty; e.exports = r }, {}], handle: [function (t, e, n) { function r(t, e, n, r) { i.buffer([t], r), i.emit(t, e, n) } var i = t("ee").get("handle"); e.exports = r, r.ee = i }, {}], id: [function (t, e, n) { function r(t) { var e = typeof t; return !t || "object" !== e && "function" !== e ? -1 : t === window ? 0 : a(t, o, function () { return i++ }) } var i = 1, o = "nr@id", a = t("gos"); e.exports = r }, {}], loader: [function (t, e, n) { function r() { if (!R++) { var t = M.info = NREUM.info, e = v.getElementsByTagName("script")[0]; if (setTimeout(u.abort, 3e4), !(t && t.licenseKey && t.applicationID && e)) return u.abort(); c(E, function (e, n) { t[e] || (t[e] = n) }); var n = a(); f("mark", ["onload", n + M.offset], null, "api"), f("timing", ["load", n]); var r = v.createElement("script"); 0 === t.agent.indexOf("http://") || 0 === t.agent.indexOf("https://") ? r.src = t.agent : r.src = l + "://" + t.agent, e.parentNode.insertBefore(r, e) } } function i() { "complete" === v.readyState && o() } function o() { f("mark", ["domContent", a() + M.offset], null, "api") } var a = t(3), f = t("handle"), c = t(8), u = t("ee"), s = t(6), d = t(4), p = t(2), l = p.getConfiguration("ssl") === !1 ? "http" : "https", m = window, v = m.document, g = "addEventListener", h = "attachEvent", y = m.XMLHttpRequest, w = y && y.prototype, b = !d(m.location); NREUM.o = { ST: setTimeout, SI: m.setImmediate, CT: clearTimeout, XHR: y, REQ: m.Request, EV: m.Event, PR: m.Promise, MO: m.MutationObserver }; var x = "" + location, E = { beacon: "bam.nr-data.net", errorBeacon: "bam.nr-data.net", agent: "js-agent.newrelic.com/nr-1209.min.js" }, O = y && w && w[g] && !/CriOS/.test(navigator.userAgent), M = e.exports = { offset: a.getLastTimestamp(), now: a, origin: x, features: {}, xhrWrappable: O, userAgent: s, disabled: b }; if (!b) { t(1), t(5), v[g] ? (v[g]("DOMContentLoaded", o, !1), m[g]("load", r, !1)) : (v[h]("onreadystatechange", i), m[h]("onload", r)), f("mark", ["firstbyte", a.getLastTimestamp()], null, "api"); var R = 0 } }, {}], "wrap-function": [function (t, e, n) { function r(t, e) { function n(e, n, r, c, u) { function nrWrapper() { var o, a, s, p; try { a = this, o = d(arguments), s = "function" == typeof r ? r(o, a) : r || {} } catch (l) { i([l, "", [o, a, c], s], t) } f(n + "start", [o, a, c], s, u); try { return p = e.apply(a, o) } catch (m) { throw f(n + "err", [o, a, m], s, u), m } finally { f(n + "end", [o, a, p], s, u) } } return a(e) ? e : (n || (n = ""), nrWrapper[p] = e, o(e, nrWrapper, t), nrWrapper) } function r(t, e, r, i, o) { r || (r = ""); var f, c, u, s = "-" === r.charAt(0); for (u = 0; u < e.length; u++)c = e[u], f = t[c], a(f) || (t[c] = n(f, s ? c + r : r, i, c, o)) } function f(n, r, o, a) { if (!m || e) { var f = m; m = !0; try { t.emit(n, r, o, e, a) } catch (c) { i([c, n, r, o], t) } m = f } } return t || (t = s), n.inPlace = r, n.flag = p, n } function i(t, e) { e || (e = s); try { e.emit("internal-error", t) } catch (n) { } } function o(t, e, n) { if (Object.defineProperty && Object.keys) try { var r = Object.keys(t); return r.forEach(function (n) { Object.defineProperty(e, n, { get: function () { return t[n] }, set: function (e) { return t[n] = e, e } }) }), e } catch (o) { i([o], n) } for (var a in t) l.call(t, a) && (e[a] = t[a]); return e } function a(t) { return !(t && t instanceof Function && t.apply && !t[p]) } function f(t, e) { var n = e(t); return n[p] = t, o(t, n, s), n } function c(t, e, n) { var r = t[e]; t[e] = f(r, n) } function u() { for (var t = arguments.length, e = new Array(t), n = 0; n < t; ++n)e[n] = arguments[n]; return e } var s = t("ee"), d = t(9), p = "nr@original", l = Object.prototype.hasOwnProperty, m = !1; e.exports = r, e.exports.wrapFunction = f, e.exports.wrapInPlace = c, e.exports.argsToArray = u }, {}] }, {}, ["loader"]);</script>
+    type="text/javascript">(window.NREUM || (NREUM = {})).loader_config = { licenseKey: "da771d87c0", applicationID: "13301311" }; window.NREUM || (NREUM = {}), __nr_require = function (t, e, n) { function r(n) { if (!e[n]) { var i = e[n] = { exports: {} }; t[n][0].call(i.exports, function (e) { var i = t[n][1][e]; return r(i || e) }, i, i.exports) } return e[n].exports } if ("function" == typeof __nr_require) return __nr_require; for (var i = 0; i < n.length; i++)r(n[i]); return r }({ 1: [function (t, e, n) { function r() { } function i(t, e, n) { return function () { return o(t, [u.now()].concat(f(arguments)), e ? null : this, n), e ? void 0 : this } } var o = t("handle"), a = t(8), f = t(9), c = t("ee").get("tracer"), u = t("loader"), s = NREUM; "undefined" == typeof window.newrelic && (newrelic = s); var d = ["setPageViewName", "setCustomAttribute", "setErrorHandler", "finished", "addToTrace", "inlineHit", "addRelease"], p = "api-", l = p + "ixn-"; a(d, function (t, e) { s[e] = i(p + e, !0, "api") }), s.addPageAction = i(p + "addPageAction", !0), s.setCurrentRouteName = i(p + "routeName", !0), e.exports = newrelic, s.interaction = function () { return (new r).get() }; var m = r.prototype = { createTracer: function (t, e) { var n = {}, r = this, i = "function" == typeof e; return o(l + "tracer", [u.now(), t, n], r), function () { if (c.emit((i ? "" : "no-") + "fn-start", [u.now(), r, i], n), i) try { return e.apply(this, arguments) } catch (t) { throw c.emit("fn-err", [arguments, this, t], n), t } finally { c.emit("fn-end", [u.now()], n) } } } }; a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","), function (t, e) { m[e] = i(l + e) }), newrelic.noticeError = function (t, e) { "string" == typeof t && (t = new Error(t)), o("err", [t, u.now(), !1, e]) } }, {}], 2: [function (t, e, n) { function r(t) { if (NREUM.init) { for (var e = NREUM.init, n = t.split("."), r = 0; r < n.length - 1; r++)if (e = e[n[r]], "object" != typeof e) return; return e = e[n[n.length - 1]] } } e.exports = { getConfiguration: r } }, {}], 3: [function (t, e, n) { function r() { return f.exists && performance.now ? Math.round(performance.now()) : (o = Math.max((new Date).getTime(), o)) - a } function i() { return o } var o = (new Date).getTime(), a = o, f = t(10); e.exports = r, e.exports.offset = a, e.exports.getLastTimestamp = i }, {}], 4: [function (t, e, n) { function r(t) { return !(!t || !t.protocol || "file:" === t.protocol) } e.exports = r }, {}], 5: [function (t, e, n) { function r(t, e) { var n = t.getEntries(); n.forEach(function (t) { "first-paint" === t.name ? d("timing", ["fp", Math.floor(t.startTime)]) : "first-contentful-paint" === t.name && d("timing", ["fcp", Math.floor(t.startTime)]) }) } function i(t, e) { var n = t.getEntries(); n.length > 0 && d("lcp", [n[n.length - 1]]) } function o(t) { t.getEntries().forEach(function (t) { t.hadRecentInput || d("cls", [t]) }) } function a(t) { if (t instanceof m && !g) { var e = Math.round(t.timeStamp), n = { type: t.type }; e <= p.now() ? n.fid = p.now() - e : e > p.offset && e <= Date.now() ? (e -= p.offset, n.fid = p.now() - e) : e = p.now(), g = !0, d("timing", ["fi", e, n]) } } function f(t) { "hidden" === t && d("pageHide", [p.now()]) } if (!("init" in NREUM && "page_view_timing" in NREUM.init && "enabled" in NREUM.init.page_view_timing && NREUM.init.page_view_timing.enabled === !1)) { var c, u, s, d = t("handle"), p = t("loader"), l = t(7), m = NREUM.o.EV; if ("PerformanceObserver" in window && "function" == typeof window.PerformanceObserver) { c = new PerformanceObserver(r); try { c.observe({ entryTypes: ["paint"] }) } catch (v) { } u = new PerformanceObserver(i); try { u.observe({ entryTypes: ["largest-contentful-paint"] }) } catch (v) { } s = new PerformanceObserver(o); try { s.observe({ type: "layout-shift", buffered: !0 }) } catch (v) { } } if ("addEventListener" in document) { var g = !1, h = ["click", "keydown", "mousedown", "pointerdown", "touchstart"]; h.forEach(function (t) { document.addEventListener(t, a, !1) }) } l(f) } }, {}], 6: [function (t, e, n) { function r(t, e) { if (!i) return !1; if (t !== i) return !1; if (!e) return !0; if (!o) return !1; for (var n = o.split("."), r = e.split("."), a = 0; a < r.length; a++)if (r[a] !== n[a]) return !1; return !0 } var i = null, o = null, a = /Version\/(\S+)\s+Safari/; if (navigator.userAgent) { var f = navigator.userAgent, c = f.match(a); c && f.indexOf("Chrome") === -1 && f.indexOf("Chromium") === -1 && (i = "Safari", o = c[1]) } e.exports = { agent: i, version: o, match: r } }, {}], 7: [function (t, e, n) { function r(t) { function e() { t(a && document[a] ? document[a] : document[i] ? "hidden" : "visible") } "addEventListener" in document && o && document.addEventListener(o, e, !1) } e.exports = r; var i, o, a; "undefined" != typeof document.hidden ? (i = "hidden", o = "visibilitychange", a = "visibilityState") : "undefined" != typeof document.msHidden ? (i = "msHidden", o = "msvisibilitychange") : "undefined" != typeof document.webkitHidden && (i = "webkitHidden", o = "webkitvisibilitychange", a = "webkitVisibilityState") }, {}], 8: [function (t, e, n) { function r(t, e) { var n = [], r = "", o = 0; for (r in t) i.call(t, r) && (n[o] = e(r, t[r]), o += 1); return n } var i = Object.prototype.hasOwnProperty; e.exports = r }, {}], 9: [function (t, e, n) { function r(t, e, n) { e || (e = 0), "undefined" == typeof n && (n = t ? t.length : 0); for (var r = -1, i = n - e || 0, o = Array(i < 0 ? 0 : i); ++r < i;)o[r] = t[e + r]; return o } e.exports = r }, {}], 10: [function (t, e, n) { e.exports = { exists: "undefined" != typeof window.performance && window.performance.timing && "undefined" != typeof window.performance.timing.navigationStart } }, {}], ee: [function (t, e, n) { function r() { } function i(t) { function e(t) { return t && t instanceof r ? t : t ? u(t, c, a) : a() } function n(n, r, i, o, a) { if (a !== !1 && (a = !0), !l.aborted || o) { t && a && t(n, r, i); for (var f = e(i), c = v(n), u = c.length, s = 0; s < u; s++)c[s].apply(f, r); var p = d[w[n]]; return p && p.push([b, n, r, f]), f } } function o(t, e) { y[t] = v(t).concat(e) } function m(t, e) { var n = y[t]; if (n) for (var r = 0; r < n.length; r++)n[r] === e && n.splice(r, 1) } function v(t) { return y[t] || [] } function g(t) { return p[t] = p[t] || i(n) } function h(t, e) { l.aborted || s(t, function (t, n) { e = e || "feature", w[n] = e, e in d || (d[e] = []) }) } var y = {}, w = {}, b = { on: o, addEventListener: o, removeEventListener: m, emit: n, get: g, listeners: v, context: e, buffer: h, abort: f, aborted: !1 }; return b } function o(t) { return u(t, c, a) } function a() { return new r } function f() { (d.api || d.feature) && (l.aborted = !0, d = l.backlog = {}) } var c = "nr@context", u = t("gos"), s = t(8), d = {}, p = {}, l = e.exports = i(); e.exports.getOrSetContext = o, l.backlog = d }, {}], gos: [function (t, e, n) { function r(t, e, n) { if (i.call(t, e)) return t[e]; var r = n(); if (Object.defineProperty && Object.keys) try { return Object.defineProperty(t, e, { value: r, writable: !0, enumerable: !1 }), r } catch (o) { } return t[e] = r, r } var i = Object.prototype.hasOwnProperty; e.exports = r }, {}], handle: [function (t, e, n) { function r(t, e, n, r) { i.buffer([t], r), i.emit(t, e, n) } var i = t("ee").get("handle"); e.exports = r, r.ee = i }, {}], id: [function (t, e, n) { function r(t) { var e = typeof t; return !t || "object" !== e && "function" !== e ? -1 : t === window ? 0 : a(t, o, function () { return i++ }) } var i = 1, o = "nr@id", a = t("gos"); e.exports = r }, {}], loader: [function (t, e, n) { function r() { if (!R++) { var t = M.info = NREUM.info, e = v.getElementsByTagName("script")[0]; if (setTimeout(u.abort, 3e4), !(t && t.licenseKey && t.applicationID && e)) return u.abort(); c(E, function (e, n) { t[e] || (t[e] = n) }); var n = a(); f("mark", ["onload", n + M.offset], null, "api"), f("timing", ["load", n]); var r = v.createElement("script"); 0 === t.agent.indexOf("http://") || 0 === t.agent.indexOf("https://") ? r.src = t.agent : r.src = l + "://" + t.agent, e.parentNode.insertBefore(r, e) } } function i() { "complete" === v.readyState && o() } function o() { f("mark", ["domContent", a() + M.offset], null, "api") } var a = t(3), f = t("handle"), c = t(8), u = t("ee"), s = t(6), d = t(4), p = t(2), l = p.getConfiguration("ssl") === !1 ? "http" : "https", m = window, v = m.document, g = "addEventListener", h = "attachEvent", y = m.XMLHttpRequest, w = y && y.prototype, b = !d(m.location); NREUM.o = { ST: setTimeout, SI: m.setImmediate, CT: clearTimeout, XHR: y, REQ: m.Request, EV: m.Event, PR: m.Promise, MO: m.MutationObserver }; var x = "" + location, E = { beacon: "bam.nr-data.net", errorBeacon: "bam.nr-data.net", agent: "js-agent.newrelic.com/nr-1210.min.js" }, O = y && w && w[g] && !/CriOS/.test(navigator.userAgent), M = e.exports = { offset: a.getLastTimestamp(), now: a, origin: x, features: {}, xhrWrappable: O, userAgent: s, disabled: b }; if (!b) { t(1), t(5), v[g] ? (v[g]("DOMContentLoaded", o, !1), m[g]("load", r, !1)) : (v[h]("onreadystatechange", i), m[h]("onload", r)), f("mark", ["firstbyte", a.getLastTimestamp()], null, "api"); var R = 0 } }, {}], "wrap-function": [function (t, e, n) { function r(t, e) { function n(e, n, r, c, u) { function nrWrapper() { var o, a, s, p; try { a = this, o = d(arguments), s = "function" == typeof r ? r(o, a) : r || {} } catch (l) { i([l, "", [o, a, c], s], t) } f(n + "start", [o, a, c], s, u); try { return p = e.apply(a, o) } catch (m) { throw f(n + "err", [o, a, m], s, u), m } finally { f(n + "end", [o, a, p], s, u) } } return a(e) ? e : (n || (n = ""), nrWrapper[p] = e, o(e, nrWrapper, t), nrWrapper) } function r(t, e, r, i, o) { r || (r = ""); var f, c, u, s = "-" === r.charAt(0); for (u = 0; u < e.length; u++)c = e[u], f = t[c], a(f) || (t[c] = n(f, s ? c + r : r, i, c, o)) } function f(n, r, o, a) { if (!m || e) { var f = m; m = !0; try { t.emit(n, r, o, e, a) } catch (c) { i([c, n, r, o], t) } m = f } } return t || (t = s), n.inPlace = r, n.flag = p, n } function i(t, e) { e || (e = s); try { e.emit("internal-error", t) } catch (n) { } } function o(t, e, n) { if (Object.defineProperty && Object.keys) try { var r = Object.keys(t); return r.forEach(function (n) { Object.defineProperty(e, n, { get: function () { return t[n] }, set: function (e) { return t[n] = e, e } }) }), e } catch (o) { i([o], n) } for (var a in t) l.call(t, a) && (e[a] = t[a]); return e } function a(t) { return !(t && t instanceof Function && t.apply && !t[p]) } function f(t, e) { var n = e(t); return n[p] = t, o(t, n, s), n } function c(t, e, n) { var r = t[e]; t[e] = f(r, n) } function u() { for (var t = arguments.length, e = new Array(t), n = 0; n < t; ++n)e[n] = arguments[n]; return e } var s = t("ee"), d = t(9), p = "nr@original", l = Object.prototype.hasOwnProperty, m = !1; e.exports = r, e.exports.wrapFunction = f, e.exports.wrapInPlace = c, e.exports.argsToArray = u }, {}] }, {}, ["loader"]);</script>
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+  <meta
+    content="Welcome to Elayna  Campbell and Murray  Smith&#39;s Wedding Website! View photos, directions, registry details and more at The Knot."
+    name="description">
+  <meta content="none" name="robots">
+  <meta
+    content="//media.xogrp.com/images/782822c7-a2e3-4fe4-82de-d0343461bcbc~rt_0-cr_0.192.2304.1344-rs_1024.h?compress=true"
+    property="og:image">
+  <title>Elayna Campbell and Murray Smith's Wedding Website</title>
+  <link href="https://www.theknot.com/us/elayna-campbell-and-murray-smith-may-2021" rel="canonical">
+  <meta content="reload" name="turbolinks-visit-control">
   <link rel="stylesheet" media="all" href="./_files/app-c6f0e0b62afb6e801057ad4250efcb45.css"
     data-turbolinks-track="true">
   <link rel="stylesheet" media="all" href="./_files/async-3c765cc841407ea9c2fa36c1e4b0028a.css"
@@ -174,9 +187,12 @@
       Date
     ));
   </script>
-
-
-
+  <link rel="preload" href="https://union.theknot.com/dist/v2/typography/latest/font-primary-regular.woff2" as="font"
+    type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="https://union.theknot.com/dist/v2/typography/latest/font-primary-bold.woff2" as="font"
+    type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="https://union.theknot.com/dist/v2/typography/latest/font-secondary-regular.woff2" as="font"
+    type="font/woff2" crossorigin="anonymous">
 
   <script async="" src="./_files/browser-modules.js" id="union-pagelet-browser-modules-script"></script>
   <script>!function () { var n = []; document.getElementById("union-pagelet-browser-modules-script").addEventListener("load", function () { n.forEach(function (n) { var e = n[0], i = n[1]; this[e].apply(this, i) }, window.UNION_INTERNAL_MODULE_SYSTEM), UNION_INTERNAL_MODULE_SYSTEM.requirejs.config({ waitSeconds: 15 }) }), window.UNION_INTERNAL_MODULE_SYSTEM = window.UNION_INTERNAL_MODULE_SYSTEM || { require: function () { n.push(["require", arguments]) }, define: function () { n.push(["define", arguments]) } } }()</script>
@@ -188,35 +204,14 @@
   </style>
   <link rel="stylesheet" href="./_files/css">
 
-  <link rel="stylesheet" media="all" href="./_files/async-3c765cc841407ea9c2fa36c1e4b0028a.css"
-    onload="if(media!=&#39;all&#39;)media=&#39;all&#39;">
-  <script
-    type="text/javascript">window.NREUM || (NREUM = {}); NREUM.info = { "beacon": "bam-cell.nr-data.net", "errorBeacon": "bam-cell.nr-data.net", "licenseKey": "da771d87c0", "applicationID": "13301311", "transactionName": "JQ1aTUBcWA9dFhlMQUkFQVxBRxsQURBTFkEODUM=", "queueTime": 0, "applicationTime": 66, "agent": "" }</script>
-  <link href="https://static.xoedge.com/patterns/images/favicon.ico" rel="shortcut icon">
-  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
-  <meta
-    content="Welcome to Elayna  Campbell and Murray  Smith&#39;s Wedding Website! View photos, directions, registry details and more at The Knot."
-    name="description">
-  <meta content="none" name="robots">
-  <title>Elayna Campbell and Murray Smith's Wedding Website</title>
-  <meta name="csrf-param" content="authenticity_token">
-  <meta name="csrf-token"
-    content="qqg/M6UkyUAq0InlaDQDF5m+2U4H3dJiZWj5pFs8A+wHD/+U6Qu1oFtRiaZ+OeLURrgSxTUQYLcYYHf1SapWNA==">
-  <link rel="preload" href="https://union.theknot.com/dist/v2/typography/latest/font-primary-regular.woff2" as="font"
-    type="font/woff2" crossorigin="anonymous">
-  <link rel="preload" href="https://union.theknot.com/dist/v2/typography/latest/font-primary-bold.woff2" as="font"
-    type="font/woff2" crossorigin="anonymous">
-  <link rel="stylesheet" href="./_files/css">
-  <link rel="preload" href="https://union.theknot.com/dist/v2/typography/latest/font-secondary-regular.woff2" as="font"
-    type="font/woff2" crossorigin="anonymous">
 </head>
 
-<body class="layout1 version-2" data-slug="elayna-campbell-and-murray-smith-may-2021">
+<body class="layout1 version-2" data-no-turbolink="" data-slug="elayna-campbell-and-murray-smith-may-2021">
   <div
     data-attrs="{&quot;weddingUUID&quot;:&quot;adfef710-b163-4258-b2a7-031db5a7bb5c&quot;,&quot;ownerUUID&quot;:&quot;5719d082-0c8e-4dd6-8796-0d4bde43d412&quot;}"
     id="analytics-data"></div>
   <div id="main-container-background"></div>
-  <div class="wedding-page" id="main-container">
+  <div class="photos-page" id="main-container">
     <div class="theme-image-container">
       <div class="theme-image"></div>
       <div class="theme-image-layer-top"></div>
@@ -227,13 +222,13 @@
     <div class="theme-image-container-right">
       <div class="theme-image-right"></div>
     </div>
-    <div id="title-container">
+    <div class="hidden" id="title-container">
       <div>
         <h1 id="wedding-title">Elayna &amp; Murray </h1>
         <h2 id="wedding-date-location"><span class="date-spacing">   </span><span id="wedding-date">May 8,
             2021</span><span class="date-spacing">   </span><span id="separator"> • </span><span
             id="wedding-location">Calgary, AB</span></h2>
-        <h2 data-hide-countdown="false" data-wedding-date="2021-05-08" id="wedding-countdown">56 days ago</h2>
+        <h2 data-hide-countdown="false" data-wedding-date="2021-05-08" id="wedding-countdown">59 days ago</h2>
       </div>
     </div>
     <div class="main-nav-container-container">
@@ -244,28 +239,28 @@
           <div class="clearfix"><button class="main-nav">Menu</button></div>
           <nav class="main-nav-hidden" data-behavior="Registry.attachNavAnalytics" id="main-nav">
             <ul>
-              <li class="main-nav-item"><a class="selected"
-                  href="/Home.html">Our Wedding</a>
+              <li class="main-nav-item"><a class=""
+                  href="Home.html" onclick="event.stopPropagation()">Our Wedding</a>
                 <ul>
-                  <li><a class="selected"
-                      href="#our-story">Our
+                  <li><a
+                      href="Home.html#our-story" onclick="event.stopPropagation()">Our
                       Story</a></li>
-                  <li><a class="selected"
-                      href="#the-wedding">The
+                  <li><a
+                      href="Home.html#the-wedding" onclick="event.stopPropagation()">The
                       Wedding</a></li>
-                  <li><a class="selected"
-                      href="#wedding-party">Wedding
+                  <li><a
+                      href="Home.html#wedding-party" onclick="event.stopPropagation()">Wedding
                       Party</a></li>
                 </ul>
               </li>
-              <li class="main-nav-item"><a class=""
-                  href="Photos.html">Photos</a>
-                <ul class="photo-albums-nav">
+              <li class="main-nav-item"><a class="selected"
+                  href="Photos.html" onclick="event.stopPropagation()">Photos</a>
+                <ul class="photo-albums-nav" onclick="event.stopPropagation()">
                   <li><a class=""
                       href="CastleCampbell.html">Castle
                       Campbell Engagement</a></li>
-                  <li><a class=""
-                      href="Murlayna.html">Murlayna</a>
+                  <li><a class="selected"
+                      href="Murlayna.html" onclick="event.stopPropagation()">Murlayna</a>
                   </li>
                 </ul>
               </li>
@@ -274,299 +269,194 @@
         </div>
       </div>
     </div>
-    <header id="header">
-      <div class="header-background"></div>
-      <div class="wide-cover-image is-desktop"
-        data-src="http://media.xogrp.com/images/782822c7-a2e3-4fe4-82de-d0343461bcbc~rt_0-cr_0.192.2304.1344-rs_1024.h?compress=true"
-        id="cover-image"
-        style="background-image: url(&quot;http://media.xogrp.com/images/782822c7-a2e3-4fe4-82de-d0343461bcbc~rt_0-cr_0.192.2304.1344-rs_1800.h?compress=true&quot;);">
-      </div>
-      <div class="wide-cover-image is-mobile"
-        data-src="http://media.xogrp.com/images/782822c7-a2e3-4fe4-82de-d0343461bcbc~rt_0-cr_384.0.1920.1536?compress=true"
-        id="cover-image"
-        style="background-image: url(http://media.xogrp.com/images/782822c7-a2e3-4fe4-82de-d0343461bcbc~rt_0-cr_384.0.1920.1536?compress=true)">
-      </div>
-    </header>
     <div id="content">
       <div class="content-background"></div>
       <div class="page">
         <div class="page-background"></div>
         <div class="page-sections">
-          <div class="anchor" id="our-story"></div>
-          <div class="section">
-            <div class="section-background"></div>
-            <div class="section-title-border-top"></div>
-            <div class="section-title"></div>
-            <div class="section-title-border-bottom"></div>
-            <div class="section-items">
-              <div class="item">
-                <div class="item-title">Our Story</div>
-                <div class="item-image-container"><img class="item-image"
-                    src="https://media.xogrp.com/images/c3f3125a-b5d8-4a5e-aa62-84892cc084e5~rt_0-rs_840.h?ordering=explicit">
-                </div>
-                <div class="item-description">
-                  <p>Murray and Elayna technically first met at (Best Man) Bao-Hoa's 23rd birthday on St. Patrick’s day
-                    in 2011—but Murray barely remembers that 😜<br><br>Their story didn’t take off until a few years
-                    later at (Maid of Honor) Laura's house in 2014; Laura (re-)introduced Elayna to her friend Murray,
-                    who was cute and adventurous and sometimes spoke in a Scottish accent when he drank… He was greeted
-                    by an energetic go-getter whose empathy for others was rivaled only by her ability to scatter tea
-                    mugs around the house. Over a summer filled with many hours-long conversations, hanging out at
-                    events like Brynn and Nick's engagement party, and a couple memorable camping trips with friends,
-                    they found themselves spending less and less time apart.<br><br>Knowing Elayna’s month-long
-                    departure to dance in the Edinburgh Tattoo would buck that trend, they went on a date to Edworthy
-                    Park to hash out what to make of their relationship. Murray was worried that they “weren’t
-                    compatible”, but luckily Elayna knew better—with more time together, Murray would see the forest
-                    past the trees. Fortunately, she was completely right: they picked up right where they left off when
-                    she returned—and have been inseparable ever since.<br><br>Elayna fell in love with the unique way
-                    that Murray saw the world, his constant desire to learn and grow, and the thoughtfulness he shared
-                    with her towards his friends. Murray was taken in by her undeniable talent at teaching,
-                    communicating with, and inspiring her students, along with the boundless diversity of new
-                    perspectives she shared and/or challenged him with. Different on the surface in so many ways, they
-                    seemed to fill each other’s gaps and make for a better whole.<br><br>And their love only deepened
-                    its roots through the next couple of years: a friends-trip to Mexico, the unforgettable “Yerp 2016”
-                    trip (to Switzerland, Germany, Austria, Croatia, and Venice), music festivals, “I love you”s, buying
-                    a house together, and then, while touring Scotland in August of 2018:</p>
-                </div>
-              </div>
-              <div class="item-separator"></div>
-              <div class="item">
-                <div class="item-title">The Proposal</div>
-                <div class="item-image-container"><img class="item-image"
-                    src="https://media.xogrp.com/images/7dd10d84-b3c6-4a4d-a7e0-cff9052baed3~rt_0-rs_840.h?ordering=explicit">
-                </div>
-                <div class="item-description">
-                  <p>In the Isle of Skye, on top of a hill, at a picturesque and magical place called Fairy Glen, Murray
-                    got down on one knee, recounted a little speech he’d prepared about their journey together so far,
-                    and asked to continue adventuring with Elayna forever. Already crying and laughing and shaking with
-                    excitement, Elayna enthusiastically replied “Yes!”</p>
-                  <p>They spent the rest of the day fawning over other Skye attractions (and of course each other),
-                    after which they enjoyed a romantic and mouth-wateringly delicious dinner at one of the island’s
-                    finest restaurants. Finally, thanks to prior help from Murray’s sister Kirsty and aunt Mairi, along
-                    with a wonderfully cooperative AirBnB host, upon arriving home from dinner that night, Elayna
-                    returned to a candlelit room, trails of rose petals, and ice-chilled champagne for two. The sight of
-                    pure surprise on her face was too much to bear, and for the first time, both of them were crying
-                    with joy together.</p>
-                </div>
-              </div>
-              <div class="item-separator"></div>
+          <div class="photo-section">
+            <div class="photo-section-title-container">
+              <div class="photo-section-title">Murlayna</div>
             </div>
-          </div>
-          <div class="section-separator"></div>
-          <div class="anchor" id="the-wedding"></div>
-          <div class="wedding-event-section">
-            <div class="wedding-event-section-background"></div>
-            <div class="wedding-event-section-title-border-top"></div>
-            <div class="wedding-event-section-title">The Wedding</div>
-            <div class="wedding-event-section-title-border-bottom"></div>
-            <p class="wedding-event-section-description"></p>
-            <div class="wedding-event-section-items">
-              <div class="wedding-event-item">
-                <div class="wedding-event-title"></div>
-                <div class="wedding-event-date">Saturday, May 8, 2021<br> 3:30 PM<br></div>
-                <div class="wedding-event-attire">Attire: Semi-formal</div>
-                <div class="wedding-event-button-container"><button class="rsvp-link" data-source="Wedding"
-                    onclick="window.location.href=&quot;/us/elayna-campbell-and-murray-smith-may-2021/rsvp&quot;">RSVP</button>
+            <div class="photo-section-items" data-behavior="PhotoAlbum.setImageClickListener">
+              <div class="col-sm-4">
+                <div class="js-photo photo-item"><img alt="Elayna  Campbell and Murray  Smith Wedding Photo 1"
+                    class="photo-image" data-caption="" data-height="640"
+                    data-mfp-src="http://media.xogrp.com/images/e6514e04-5acc-4571-94c7-94f3174885ca~rt_auto-rs_325.h"
+                    data-width="960" src="./_files/e6514e04-5acc-4571-94c7-94f3174885ca_rt_auto-rs_325.h">
                 </div>
-                <div class="wedding-event-separator"></div>
-                <div class="wedding-event-description">Cocktail Hour 4:00-5:30 PM
-                  Reception 5:30-1:00 AM
-
-                  If you have any specific dietary restrictions, please indicate them in the ‘message for the bride and
-                  groom’ section of your RSVP.
-
-                  We’re so looking forward to celebrating with you!</div>
+                <div class="js-photo photo-item"><img alt="Elayna  Campbell and Murray  Smith Wedding Photo 2"
+                    class="photo-image" data-caption="" data-height="1079"
+                    data-mfp-src="http://media.xogrp.com/images/8522e10c-fca0-44f3-8ead-62df081c295e~rt_auto-rs_325.h"
+                    data-width="1080" src="./_files/8522e10c-fca0-44f3-8ead-62df081c295e_rt_auto-rs_325.h">
+                </div>
+                <div class="js-photo photo-item"><img alt="Elayna  Campbell and Murray  Smith Wedding Photo 3"
+                    class="photo-image" data-caption="" data-height="960"
+                    data-mfp-src="http://media.xogrp.com/images/c42a5059-d9c6-4aeb-a282-faad38267146~rt_auto-rs_325.h"
+                    data-width="1280" src="./_files/c42a5059-d9c6-4aeb-a282-faad38267146_rt_auto-rs_325.h">
+                </div>
+                <div class="js-photo photo-item"><img alt="Elayna  Campbell and Murray  Smith Wedding Photo 4"
+                    class="photo-image" data-caption="" data-height="960"
+                    data-mfp-src="http://media.xogrp.com/images/324ee053-04b7-424f-8ce0-389732b0981e~rt_auto-rs_325.h"
+                    data-width="1280" src="./_files/324ee053-04b7-424f-8ce0-389732b0981e_rt_auto-rs_325.h">
+                </div>
+                <div class="js-photo photo-item"><img alt="Elayna  Campbell and Murray  Smith Wedding Photo 5"
+                    class="photo-image" data-caption="" data-height="1532"
+                    data-mfp-src="http://media.xogrp.com/images/cd999c8d-a62a-44f4-bf9e-34af5089c8c5~rt_auto-rs_325.h"
+                    data-width="2038" src="./_files/cd999c8d-a62a-44f4-bf9e-34af5089c8c5_rt_auto-rs_325.h">
+                </div>
+                <div class="js-photo photo-item"><img alt="Elayna  Campbell and Murray  Smith Wedding Photo 6"
+                    class="photo-image" data-caption="" data-height="4032"
+                    data-mfp-src="http://media.xogrp.com/images/814efdec-c16c-4a82-b525-d58431fc17b7~rt_auto-rs_325.h"
+                    data-width="3024" src="./_files/814efdec-c16c-4a82-b525-d58431fc17b7_rt_auto-rs_325.h">
+                </div>
+                <div class="js-photo photo-item"><img alt="Elayna  Campbell and Murray  Smith Wedding Photo 7"
+                    class="photo-image" data-caption="" data-height="720"
+                    data-mfp-src="http://media.xogrp.com/images/bf0d320d-3cc6-42f3-9bc6-624bc8ad8704~rt_auto-rs_325.h"
+                    data-width="960" src="./_files/bf0d320d-3cc6-42f3-9bc6-624bc8ad8704_rt_auto-rs_325.h">
+                </div>
+                <div class="js-photo photo-item"><img alt="Elayna  Campbell and Murray  Smith Wedding Photo 8"
+                    class="photo-image" data-caption="" data-height="960"
+                    data-mfp-src="http://media.xogrp.com/images/43f76d12-4c10-4353-9bf7-8497e15b2349~rt_auto-rs_325.h"
+                    data-width="960" src="./_files/43f76d12-4c10-4353-9bf7-8497e15b2349_rt_auto-rs_325.h">
+                </div>
+                <div class="js-photo photo-item"><img alt="Elayna  Campbell and Murray  Smith Wedding Photo 9"
+                    class="photo-image" data-caption="" data-height="1080"
+                    data-mfp-src="http://media.xogrp.com/images/72e24216-d44a-4ef8-8a05-3f3ff6f9a897~rt_auto-rs_325.h"
+                    data-width="1080" src="./_files/72e24216-d44a-4ef8-8a05-3f3ff6f9a897_rt_auto-rs_325.h">
+                </div>
+                <div class="js-photo photo-item"><img alt="Elayna  Campbell and Murray  Smith Wedding Photo 10"
+                    class="photo-image" data-caption="" data-height="3264"
+                    data-mfp-src="http://media.xogrp.com/images/53488f56-fd3c-46c7-84af-1dbeec313367~rt_auto-rs_325.h"
+                    data-width="2448" src="./_files/53488f56-fd3c-46c7-84af-1dbeec313367_rt_auto-rs_325.h">
+                </div>
+                <div class="js-photo photo-item"><img alt="Elayna  Campbell and Murray  Smith Wedding Photo 11"
+                    class="photo-image" data-caption="" data-height="3918"
+                    data-mfp-src="http://media.xogrp.com/images/cf777c39-65ef-411e-b49d-90104f450123~rt_auto-rs_325.h"
+                    data-width="2938" src="./_files/cf777c39-65ef-411e-b49d-90104f450123_rt_auto-rs_325.h">
+                </div>
+                <div class="js-photo photo-item"><img alt="Elayna  Campbell and Murray  Smith Wedding Photo 12"
+                    class="photo-image" data-caption="" data-height="3899"
+                    data-mfp-src="http://media.xogrp.com/images/300522e8-62e4-4f55-94da-b041680a1373~rt_auto-rs_325.h"
+                    data-width="5848" src="./_files/300522e8-62e4-4f55-94da-b041680a1373_rt_auto-rs_325.h">
+                </div>
               </div>
-            </div>
-          </div>
-          <div class="section-separator"></div>
-          <div class="anchor" id="wedding-party"></div>
-          <div class="wedding-party-section">
-            <div class="wedding-party-section-background"></div>
-            <div class="wedding-party-section-title-border-top"></div>
-            <div class="wedding-party-section-title">Wedding Party</div>
-            <div class="wedding-party-section-title-border-bottom"></div>
-            <p class="wedding-party-section-description"></p>
-            <div class="wedding-party-section-items">
-              <div class="col-md-6">
-                <div class="wedding-party-item">
-                  <div class="wedding-party-image-container">
-                    <div class="wedding-party-image"
-                      style="background-image: url(http://media.xogrp.com/images/4c01b009-1208-41a6-aef8-b41b9db7f265)">
-                    </div>
-                  </div>
-                  <div class="wedding-party-content-container">
-                    <div class="wedding-party-title">Laura Tak - Maid of Honor</div>
-                    <div class="wedding-party-description">
-                      <p>Laura is one of Elayna's oldest and closest friends, their friendship going back to grade 7.
-                        She is also the one responsible for introducing the bride to the groom! Laura is passionate
-                        about everything she does, bringing light and energy to her surroundings. It is that fiery
-                        spirit that makes her a compassionate and hardworking nurse. </p>
-                    </div>
-                  </div>
+              <div class="col-sm-4">
+                <div class="js-photo photo-item"><img alt="Elayna  Campbell and Murray  Smith Wedding Photo 1"
+                    class="photo-image" data-caption="" data-height="1080"
+                    data-mfp-src="http://media.xogrp.com/images/4af1b7d3-7d26-4a3f-8eb3-9ca314d820a4~rt_auto-rs_325.h"
+                    data-width="1080" src="./_files/4af1b7d3-7d26-4a3f-8eb3-9ca314d820a4_rt_auto-rs_325.h">
                 </div>
-                <div class="wedding-party-separator"></div>
-                <div class="wedding-party-item">
-                  <div class="wedding-party-image-container">
-                    <div class="wedding-party-image"
-                      style="background-image: url(http://media.xogrp.com/images/6a5da076-3ce8-49e1-91a0-ec333b9e1907)">
-                    </div>
-                  </div>
-                  <div class="wedding-party-content-container">
-                    <div class="wedding-party-title">Aurian Clarkson - Bridesmaid</div>
-                    <div class="wedding-party-description">
-                      <p>Aurian is Elayna's second sister and the one who lives the furthest away, coming from Perth,
-                        Australia. She is the definition of a hard-worker, taking pride in working diligently and with
-                        precision on many different projects, including raising her two young daughters. Aurian is a
-                        safety engineer, and runs the Australian chapter of the Campbell School of Highland Dance.</p>
-                    </div>
-                  </div>
+                <div class="js-photo photo-item"><img alt="Elayna  Campbell and Murray  Smith Wedding Photo 2"
+                    class="photo-image" data-caption="" data-height="1280"
+                    data-mfp-src="http://media.xogrp.com/images/bbab9ae9-c91f-4247-a989-1bb7adf46c1f~rt_auto-rs_325.h"
+                    data-width="960" src="./_files/bbab9ae9-c91f-4247-a989-1bb7adf46c1f_rt_auto-rs_325.h">
                 </div>
-                <div class="wedding-party-separator"></div>
-                <div class="wedding-party-item">
-                  <div class="wedding-party-image-container">
-                    <div class="wedding-party-image"
-                      style="background-image: url(http://media.xogrp.com/images/0cb6609a-c6df-4814-bfc1-51b95092b86f)">
-                    </div>
-                  </div>
-                  <div class="wedding-party-content-container">
-                    <div class="wedding-party-title">Alexandra Campbell - Bridesmaid</div>
-                    <div class="wedding-party-description">
-                      <p>Alexandra is Elayna's third sister and the one who most often gets mistaken for her twin. The
-                        two spend almost all their time together working to make their highland dance studio a success.
-                        She fights for what she thinks is right and isn't afraid of a challenge, often inspiring others
-                        to speak up. Alexandra works as a environmental geophysicist, and as mother to her son and
-                        daughter. </p>
-                    </div>
-                  </div>
+                <div class="js-photo photo-item"><img alt="Elayna  Campbell and Murray  Smith Wedding Photo 3"
+                    class="photo-image" data-caption="" data-height="960"
+                    data-mfp-src="http://media.xogrp.com/images/496b4c26-f5ef-492f-a468-5ec904a20097~rt_auto-rs_325.h"
+                    data-width="1280" src="./_files/496b4c26-f5ef-492f-a468-5ec904a20097_rt_auto-rs_325.h">
                 </div>
-                <div class="wedding-party-separator"></div>
-                <div class="wedding-party-item">
-                  <div class="wedding-party-image-container">
-                    <div class="wedding-party-image"
-                      style="background-image: url(http://media.xogrp.com/images/de586f64-c4ad-429e-8da8-8d021b605d57)">
-                    </div>
-                  </div>
-                  <div class="wedding-party-content-container">
-                    <div class="wedding-party-title">Éowyn Campbell - Bridesmaid</div>
-                    <div class="wedding-party-description">
-                      <p>Eowyn is Elayna's oldest sister and—although they are over ten years apart in age—her
-                        university buddy. She is wise and insightful, often taking on the role of confidant and family
-                        advisor. She gracefully balances working towards her PhD in hydrogeology with raising her two
-                        sons and daughter.</p>
-                    </div>
-                  </div>
+                <div class="js-photo photo-item"><img alt="Elayna  Campbell and Murray  Smith Wedding Photo 4"
+                    class="photo-image" data-caption="" data-height="2038"
+                    data-mfp-src="http://media.xogrp.com/images/702a06af-da1b-40cd-b2fc-253538995c99~rt_auto-rs_325.h"
+                    data-width="1532" src="./_files/702a06af-da1b-40cd-b2fc-253538995c99_rt_auto-rs_325.h">
                 </div>
-                <div class="wedding-party-separator"></div>
-                <div class="wedding-party-item">
-                  <div class="wedding-party-image-container">
-                    <div class="wedding-party-image"
-                      style="background-image: url(http://media.xogrp.com/images/ed5f9541-98fa-4134-8737-83ce68b0771a)">
-                    </div>
-                  </div>
-                  <div class="wedding-party-content-container">
-                    <div class="wedding-party-title">Emma Reid - Bridesmaid</div>
-                    <div class="wedding-party-description">
-                      <p>Emma and Elayna have been friends since 2013 when they first danced together in the Basel
-                        Tattoo in Switzerland, where they quickly became as close as sisters. She brightens every
-                        conversation with her unfaltering positivity and wit, and has a genuine kindness that you can
-                        feel the moment you meet her. She currently works as a pharmacist in Halifax, Nova Scotia.</p>
-                    </div>
-                  </div>
+                <div class="js-photo photo-item"><img alt="Elayna  Campbell and Murray  Smith Wedding Photo 5"
+                    class="photo-image" data-caption="" data-height="1532"
+                    data-mfp-src="http://media.xogrp.com/images/944fd950-9fa5-4331-a029-02f6072ac1aa~rt_auto-rs_325.h"
+                    data-width="2038" src="./_files/944fd950-9fa5-4331-a029-02f6072ac1aa_rt_auto-rs_325.h">
                 </div>
-                <div class="wedding-party-separator"></div>
+                <div class="js-photo photo-item"><img alt="Elayna  Campbell and Murray  Smith Wedding Photo 6"
+                    class="photo-image" data-caption="" data-height="2448"
+                    data-mfp-src="http://media.xogrp.com/images/4336777a-b796-4a71-a2fd-05ad52799f4e~rt_auto-rs_325.h"
+                    data-width="3264" src="./_files/4336777a-b796-4a71-a2fd-05ad52799f4e_rt_auto-rs_325.h">
+                </div>
+                <div class="js-photo photo-item"><img alt="Elayna  Campbell and Murray  Smith Wedding Photo 7"
+                    class="photo-image" data-caption="" data-height="640"
+                    data-mfp-src="http://media.xogrp.com/images/55ac1557-7507-4b5c-bffd-5e673da86998~rt_auto-rs_325.h"
+                    data-width="960" src="./_files/55ac1557-7507-4b5c-bffd-5e673da86998_rt_auto-rs_325.h">
+                </div>
+                <div class="js-photo photo-item"><img alt="Elayna  Campbell and Murray  Smith Wedding Photo 8"
+                    class="photo-image" data-caption="" data-height="717"
+                    data-mfp-src="http://media.xogrp.com/images/890b930a-5c9f-423a-a07a-9ec5bd53dd20~rt_auto-rs_325.h"
+                    data-width="960" src="./_files/890b930a-5c9f-423a-a07a-9ec5bd53dd20_rt_auto-rs_325.h">
+                </div>
+                <div class="js-photo photo-item"><img alt="Elayna  Campbell and Murray  Smith Wedding Photo 9"
+                    class="photo-image" data-caption="" data-height="960"
+                    data-mfp-src="http://media.xogrp.com/images/26117f64-e6fc-4fc9-bcc5-0913ae8bfd64~rt_auto-rs_325.h"
+                    data-width="1280" src="./_files/26117f64-e6fc-4fc9-bcc5-0913ae8bfd64_rt_auto-rs_325.h">
+                </div>
+                <div class="js-photo photo-item"><img alt="Elayna  Campbell and Murray  Smith Wedding Photo 10"
+                    class="photo-image" data-caption="" data-height="3088"
+                    data-mfp-src="http://media.xogrp.com/images/fd33cd2e-5171-4f48-856f-fa54f9e19192~rt_auto-rs_325.h"
+                    data-width="2320" src="./_files/fd33cd2e-5171-4f48-856f-fa54f9e19192_rt_auto-rs_325.h">
+                </div>
+                <div class="js-photo photo-item"><img alt="Elayna  Campbell and Murray  Smith Wedding Photo 11"
+                    class="photo-image" data-caption="" data-height="2448"
+                    data-mfp-src="http://media.xogrp.com/images/6f63d24b-80b3-4314-8f82-fd2b7af32e56~rt_auto-rs_325.h"
+                    data-width="3264" src="./_files/6f63d24b-80b3-4314-8f82-fd2b7af32e56_rt_auto-rs_325.h">
+                </div>
               </div>
-              <div class="section-separator hidden-md hidden-lg"></div>
-              <div class="col-md-6">
-                <div class="wedding-party-item">
-                  <div class="wedding-party-image-container">
-                    <div class="wedding-party-image"
-                      style="background-image: url(http://media.xogrp.com/images/d0b04d21-8977-47cd-9da7-0c6a13e4855e~rt_0-cr_0.49.280.329?ordering=explicit)">
-                    </div>
-                  </div>
-                  <div class="wedding-party-content-container">
-                    <div class="wedding-party-title">Bao-Hoa Hong - Best Man</div>
-                    <div class="wedding-party-description">
-                      <p>His best bud since junior high, Bao-Hoa is present in most of Murray’s most cherished memories.
-                        He can somehow enlighten and entertain you in a conversation about virtually any topic (but
-                        especially music, culture, hockey, golf), so it’s no wonder he's at the heart of so many of our
-                        friend group's favourite moments and adventures.</p>
-                    </div>
-                  </div>
+              <div class="col-sm-4">
+                <div class="js-photo photo-item"><img alt="Elayna  Campbell and Murray  Smith Wedding Photo 1"
+                    class="photo-image" data-caption="" data-height="960"
+                    data-mfp-src="http://media.xogrp.com/images/944539ae-8800-4db9-ae57-52db5d7b2584~rt_auto-rs_325.h"
+                    data-width="1280" src="./_files/944539ae-8800-4db9-ae57-52db5d7b2584_rt_auto-rs_325.h">
                 </div>
-                <div class="wedding-party-separator"></div>
-                <div class="wedding-party-item">
-                  <div class="wedding-party-image-container">
-                    <div class="wedding-party-image"
-                      style="background-image: url(http://media.xogrp.com/images/f5cf3e31-1548-4870-9940-38c0730cc46e~rt_0?ordering=explicit)">
-                    </div>
-                  </div>
-                  <div class="wedding-party-content-container">
-                    <div class="wedding-party-title">Mo Jama - Groomsman</div>
-                    <div class="wedding-party-description">
-                      <p>Mo is basically family. He met Murray in high school, but it wasn’t until university that they
-                        became close friends—often while skipping engineering classes to play pool. He is a great
-                        listener, a talented gamer, a total yes-man, and one of the most eager and open minds you’ll
-                        ever meet.</p>
-                    </div>
-                  </div>
+                <div class="js-photo photo-item"><img alt="Elayna  Campbell and Murray  Smith Wedding Photo 2"
+                    class="photo-image" data-caption="" data-height="1280"
+                    data-mfp-src="http://media.xogrp.com/images/b333270f-2efc-451f-abf3-c5e3d97224a1~rt_auto-rs_325.h"
+                    data-width="960" src="./_files/b333270f-2efc-451f-abf3-c5e3d97224a1_rt_auto-rs_325.h">
                 </div>
-                <div class="wedding-party-separator"></div>
-                <div class="wedding-party-item">
-                  <div class="wedding-party-image-container">
-                    <div class="wedding-party-image"
-                      style="background-image: url(http://media.xogrp.com/images/aa995690-8b72-45df-b9f9-6a2606ef3862)">
-                    </div>
-                  </div>
-                  <div class="wedding-party-content-container">
-                    <div class="wedding-party-title">Nick Havinga - Groomsman</div>
-                    <div class="wedding-party-description">
-                      <p>Friends since high school, Nick is as well-rounded a gent as they come. He competed alongside
-                        Murray on the UofC interclub squash team, has been a golf idol to friends since long before
-                        then, and dazzles at hockey too (both on the ice, and when managing winning fantasy pools). He
-                        loves his wife Brynn dearly, and, having married before most of our friends, has both the
-                        experience and level-headedness to offer advice whenever you need it.</p>
-                    </div>
-                  </div>
+                <div class="js-photo photo-item"><img alt="Elayna  Campbell and Murray  Smith Wedding Photo 3"
+                    class="photo-image" data-caption="" data-height="960"
+                    data-mfp-src="http://media.xogrp.com/images/abf2ba5a-dd34-4e1f-b98e-a627674c5ec6~rt_auto-rs_325.h"
+                    data-width="960" src="./_files/abf2ba5a-dd34-4e1f-b98e-a627674c5ec6_rt_auto-rs_325.h">
                 </div>
-                <div class="wedding-party-separator"></div>
-                <div class="wedding-party-item">
-                  <div class="wedding-party-image-container">
-                    <div class="wedding-party-image"
-                      style="background-image: url(http://media.xogrp.com/images/2aabd47d-5d19-4c6c-9f85-11787177d6aa)">
-                    </div>
-                  </div>
-                  <div class="wedding-party-content-container">
-                    <div class="wedding-party-title">Mark Odorico - Groomsman</div>
-                    <div class="wedding-party-description">
-                      <p>Friends since before they even knew what that meant (because his and Murray’s parents are
-                        besties), Mark has long been a role model to Murray for his maturity, wisdom, and foresight. He
-                        also excels at all walks of outdoorsy activities, has an impressively powerful soccer kick, is
-                        an avid and adept PC gamer, and it is always a treat to eat anything he cooks!</p>
-                    </div>
-                  </div>
+                <div class="js-photo photo-item"><img alt="Elayna  Campbell and Murray  Smith Wedding Photo 4"
+                    class="photo-image" data-caption="" data-height="1080"
+                    data-mfp-src="http://media.xogrp.com/images/7f9bb42b-d03a-4d1c-9a61-2fcbfbcf26cb~rt_auto-rs_325.h"
+                    data-width="1080" src="./_files/7f9bb42b-d03a-4d1c-9a61-2fcbfbcf26cb_rt_auto-rs_325.h">
                 </div>
-                <div class="wedding-party-separator"></div>
-                <div class="wedding-party-item">
-                  <div class="wedding-party-image-container">
-                    <div class="wedding-party-image"
-                      style="background-image: url(http://media.xogrp.com/images/aa260fef-08f7-4d4d-b962-fb340391534c)">
-                    </div>
-                  </div>
-                  <div class="wedding-party-content-container">
-                    <div class="wedding-party-title">Matt Fecho - Groomsman</div>
-                    <div class="wedding-party-description">
-                      <p>Even though they were high school aged when they met, Murray has always known Matt as a kid at
-                        heart. Ever the prankster, and always down for a good time, he is contagiously easy-going and
-                        fun—likely two big reasons why he’s become such a generous and successful businessman, not to
-                        mention, now, a family man, alongside his wife Jackie and their daughter, dog, and cat</p>
-                    </div>
-                  </div>
+                <div class="js-photo photo-item"><img alt="Elayna  Campbell and Murray  Smith Wedding Photo 5"
+                    class="photo-image" data-caption="" data-height="2458"
+                    data-mfp-src="http://media.xogrp.com/images/109aab40-dc45-438b-8826-d54c6fb7b4a1~rt_auto-rs_325.h"
+                    data-width="2180" src="./_files/109aab40-dc45-438b-8826-d54c6fb7b4a1_rt_auto-rs_325.h">
                 </div>
-                <div class="wedding-party-separator"></div>
+                <div class="js-photo photo-item"><img alt="Elayna  Campbell and Murray  Smith Wedding Photo 6"
+                    class="photo-image" data-caption="" data-height="3264"
+                    data-mfp-src="http://media.xogrp.com/images/8c2ff164-ad04-416e-a623-4f7a76a1f88d~rt_auto-rs_325.h"
+                    data-width="2448" src="./_files/8c2ff164-ad04-416e-a623-4f7a76a1f88d_rt_auto-rs_325.h">
+                </div>
+                <div class="js-photo photo-item"><img alt="Elayna  Campbell and Murray  Smith Wedding Photo 7"
+                    class="photo-image" data-caption="" data-height="720"
+                    data-mfp-src="http://media.xogrp.com/images/897c1bcc-47cc-4e42-b99d-8068d33ffbdf~rt_auto-rs_325.h"
+                    data-width="960" src="./_files/897c1bcc-47cc-4e42-b99d-8068d33ffbdf_rt_auto-rs_325.h">
+                </div>
+                <div class="js-photo photo-item"><img alt="Elayna  Campbell and Murray  Smith Wedding Photo 8"
+                    class="photo-image" data-caption="" data-height="960"
+                    data-mfp-src="http://media.xogrp.com/images/49a5dd90-b330-4b0b-9bde-64dfd4180daf~rt_auto-rs_325.h"
+                    data-width="1280" src="./_files/49a5dd90-b330-4b0b-9bde-64dfd4180daf_rt_auto-rs_325.h">
+                </div>
+                <div class="js-photo photo-item"><img alt="Elayna  Campbell and Murray  Smith Wedding Photo 9"
+                    class="photo-image" data-caption="" data-height="1537"
+                    data-mfp-src="http://media.xogrp.com/images/63dae07d-0bb0-4f21-9a6f-e9aec5914a81~rt_auto-rs_325.h"
+                    data-width="2049" src="./_files/63dae07d-0bb0-4f21-9a6f-e9aec5914a81_rt_auto-rs_325.h">
+                </div>
+                <div class="js-photo photo-item"><img alt="Elayna  Campbell and Murray  Smith Wedding Photo 10"
+                    class="photo-image" data-caption="" data-height="3264"
+                    data-mfp-src="http://media.xogrp.com/images/32079ec1-f151-4d06-af1d-2351f577b679~rt_auto-rs_325.h"
+                    data-width="2448" src="./_files/32079ec1-f151-4d06-af1d-2351f577b679_rt_auto-rs_325.h">
+                </div>
+                <div class="js-photo photo-item"><img alt="Elayna  Campbell and Murray  Smith Wedding Photo 11"
+                    class="photo-image" data-caption="" data-height="4000"
+                    data-mfp-src="http://media.xogrp.com/images/c53f34ad-b7db-4d89-b005-e1d5fdbf48e5~rt_auto-rs_325.h"
+                    data-width="6000" src="./_files/c53f34ad-b7db-4d89-b005-e1d5fdbf48e5_rt_auto-rs_325.h">
+                </div>
               </div>
             </div>
           </div>
-          <div class="section-separator"></div>
         </div>
       </div>
     </div>
