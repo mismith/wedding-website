@@ -6,7 +6,6 @@
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <link href="https://static.xoedge.com/patterns/images/favicon.ico" rel="shortcut icon">
   <script src="./_files/nr-1209.min.js"></script>
-  <script type="text/javascript" async="" src="./_files/analytics.min.js"></script>
   <script
     type="text/javascript">window.NREUM || (NREUM = {}); NREUM.info = { "beacon": "bam-cell.nr-data.net", "errorBeacon": "bam-cell.nr-data.net", "licenseKey": "da771d87c0", "applicationID": "13301311", "transactionName": "JQ1aTUBcWA9dFhlMQUkFQVxBRxsTUAtCVkFJEVxWRQ==", "queueTime": 0, "applicationTime": 62, "agent": "" }</script>
   <script
@@ -16,11 +15,7 @@
     content="Welcome to Elayna  Campbell and Murray  Smith&#39;s Wedding Website! View photos, directions, registry details and more at The Knot."
     name="description">
   <meta content="none" name="robots">
-  <meta
-    content="//media.xogrp.com/images/782822c7-a2e3-4fe4-82de-d0343461bcbc~rt_0-cr_0.192.2304.1344-rs_1024.h?compress=true"
-    property="og:image">
   <title>Elayna Campbell and Murray Smith's Wedding Website</title>
-  <link href="https://www.theknot.com/us/elayna-campbell-and-murray-smith-may-2021" rel="canonical">
   <meta content="reload" name="turbolinks-visit-control">
   <link rel="stylesheet" media="all" href="./_files/app-c6f0e0b62afb6e801057ad4250efcb45.css"
     data-turbolinks-track="true">
@@ -34,68 +29,6 @@
     defer="defer" id="layout-js"></script>
   <script src="./_files/guest-elemental-init-b3b3e08aaf7f51317f54665715884dba.js"
     data-turbolinks-track="true" defer="defer" id="guest-elemental-init-js"></script>
-  <script type="text/javascript">
-    !function () {
-      var analytics = window.analytics = window.analytics || []; if (!analytics.initialize) if (analytics.invoked) window.console && console.error && console.error("Segment snippet included twice."); else {
-        analytics.invoked = !0; analytics.methods = ["trackSubmit", "trackClick", "trackLink", "trackForm", "pageview", "identify", "reset", "group", "track", "ready", "alias", "debug", "page", "once", "off", "on"]; analytics.factory = function (t) { return function () { var e = Array.prototype.slice.call(arguments); e.unshift(t); analytics.push(e); return analytics } }; for (var t = 0; t < analytics.methods.length; t++) { var e = analytics.methods[t]; analytics[e] = analytics.factory(e) } analytics.load = function (t, e) { var n = document.createElement("script"); n.type = "text/javascript"; n.async = !0; n.src = ("https:" === document.location.protocol ? "https://" : "http://") + "cdn.segment.com/analytics.js/v1/" + t + "/analytics.min.js"; var o = document.getElementsByTagName("script")[0]; o.parentNode.insertBefore(n, o); analytics._loadOptions = e }; analytics.SNIPPET_VERSION = "4.1.0";
-        analytics.load(
-          'nibq354xak',
-          { integrations: { 'Facebook Pixel': false, 'Optimizely': false } }
-        );
-      }
-    }();
-
-    /* 
-      analytics.ready runs a function after Segment loads all analytics libraries
-      In this case, we want to preserve last touch UTM properties on Mixpanel so that our
-      UTM campaigns are tracked more accurately
-  
-      https://mixpanel.com/blog/2015/05/11/community-tip-last-touch-utm-tags/
-    */
-
-    analytics.ready(function () {
-      function getQueryParam(url, param) {
-        param = param.replace(/[[]/, "\[").replace(/[]]/, "\]");
-        var regexS = "[\?&]" + param + "=([^&#]*)",
-          regex = new RegExp(regexS),
-          results = regex.exec(url);
-        if (results === null || (results && typeof (results[1]) !== 'string' && results[1].length)) {
-          return '';
-        } else {
-          return decodeURIComponent(results[1]).replace(/\W/gi, ' ');
-        }
-      };
-
-      function campaignParams() {
-        var campaign_keywords = 'utm_source utm_medium utm_campaign utm_content utm_term'.split(' '),
-          kw = '',
-          params = {},
-          first_params = {};
-
-        var index;
-
-        for (index = 0; index < campaign_keywords.length; ++index) {
-          kw = getQueryParam(document.URL, campaign_keywords[index]);
-          if (kw.length) {
-            params[campaign_keywords[index] + ' [last touch]'] = kw;
-          }
-        }
-
-        for (index = 0; index < campaign_keywords.length; ++index) {
-          kw = getQueryParam(document.URL, campaign_keywords[index]);
-          if (kw.length) {
-            first_params[campaign_keywords[index] + ' [first touch]'] = kw;
-          }
-        }
-
-        mixpanel.people.set(params);
-        mixpanel.people.set_once(first_params);
-        mixpanel.register(params);
-      }
-
-      campaignParams();
-    });
-  </script>
   <meta name="csrf-param" content="authenticity_token">
   <meta name="csrf-token"
     content="mE9tbx1ClEtmYmNHxmIGcnUVgCWqXHZCJnPbNmz3Xzc16K3IUW3oqxfjYwTQb+exqhNLrpiRxJdbe1VnfmEK7w==">
@@ -305,7 +238,7 @@
           <nav class="main-nav-hidden" data-behavior="Registry.attachNavAnalytics" id="main-nav">
             <ul>
               <li class="main-nav-item"><a class=""
-                  href="https://www.theknot.com/us/elayna-campbell-and-murray-smith-may-2021">Our Wedding</a>
+                  href="/Home.html">Our Wedding</a>
                 <ul>
                   <li><a class=""
                       href="#our-story">Our
@@ -379,7 +312,7 @@
                     src="./_files/a7fe963c-e39a-4568-b129-c48c8bdc2ada_rt_auto-rs_325.h"></div>
                 <div class="js-photo photo-item"><img alt="Elayna  Campbell and Murray  Smith Wedding Photo 4"
                     class="photo-image" data-caption=""
-                    data-echo="//media.xogrp.com/images/61e7d4b9-2cce-4039-9176-efa07a5d70a3~rt_auto-rs_325.h"
+                    data-echo="http://media.xogrp.com/images/61e7d4b9-2cce-4039-9176-efa07a5d70a3~rt_auto-rs_325.h"
                     data-height="1536"
                     data-mfp-src="http://media.xogrp.com/images/61e7d4b9-2cce-4039-9176-efa07a5d70a3~rt_auto-rs_325.h"
                     data-width="2304" src="./_files/load-865f1893dd33064d86c9268eb72fbf36.png"></div>
