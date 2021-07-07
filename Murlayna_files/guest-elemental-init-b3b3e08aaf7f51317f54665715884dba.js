@@ -1,0 +1,1 @@
+$(function(){Elemental.load(document)}),$(document).on("page:load",function(){Elemental.load(document)});
